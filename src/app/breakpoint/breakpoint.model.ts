@@ -1,9 +1,13 @@
 export class Breakpoint {
 
     constructor(
-        id: Number,
-        from: Number,
-        to: Number,
-        unit: String = 'px'
+        public id: Number,
+        public from: Number,
+        public to: Number,
+        public unit: String = 'px'
     ) {}
+
+    get title() {
+        return this.from + ' - ' + ( this.to !== null ? this.to : '∞' );
+    }
 }

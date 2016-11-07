@@ -4,8 +4,8 @@ import { Rule }       from './../rule/rule.model';
 export class Composition {
 
     constructor(
-        name: String,
-        breakpoints: Breakpoint[],
-        rule: Rule[]
+        public name: String,
+        public breakpoints: Breakpoint[],
+        public rules: Rule[]
     ) {}
 }

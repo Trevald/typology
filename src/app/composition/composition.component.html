@@ -1,0 +1,54 @@
+<main class="main col-xs-8">
+    <div class="container-fluid">1</div>    
+</main>
+
+<aside class="sidebar col-xs-4">
+    <div class="container-fluid">
+
+        <ngb-accordion #acc="ngbAccordion" [closeOthers]="true" activeIds="ngb-panel-1">
+
+        <ngb-panel>
+            <template ngbPanelTitle>
+            <span>Media Queries</span>
+            </template>
+            <template ngbPanelContent>
+            Media
+            </template>
+        </ngb-panel>                   
+
+
+            <!-- Rule loop -->
+            <ngb-panel *ngFor="let rule of composition.rules">
+
+                <template ngbPanelTitle>
+                    <span>{{rule.title}} <i>{{rule.description}}</i></span>
+                </template>
+
+                <template ngbPanelContent>
+                    
+                    <!-- Rule breakpoints -->
+                    <ngb-tabset>
+
+                        <ngb-tab *ngFor="let breakpoint of composition.breakpoints">
+                            <template ngbTabTitle>{{ breakpoint.title }}</template>
+                            <template ngbTabContent>
+                                
+                                <app-rule-line
+                                    *ngFor="let ruleLine of rule.getRuleLinesByBreakpoint(breakpoint.id)"
+                                    [ruleLine]="ruleLine"></app-rule-line>
+
+                            </template>
+                        </ngb-tab>
+
+                    </ngb-tabset>
+                    <!-- // Rule breakpoints -->
+                    
+                </template>
+
+            </ngb-panel> 
+            <!-- // Rule loop -->
+
+        </ngb-accordion>
+
+    </div>
+</aside>

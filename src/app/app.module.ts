@@ -6,13 +6,18 @@ import { HttpModule } from '@angular/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { RuleComponent } from './rule/rule.component';
+import { CompositionComponent } from './composition/composition.component';
+import { RuleComponent, RuleLineComponent } from './rule';
 import { BreakpointComponent } from './breakpoint/breakpoint.component';
+
+import { CompositionService } from './composition/composition.service';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CompositionComponent,
     RuleComponent,
+    RuleLineComponent,
     BreakpointComponent
   ],
   imports: [
@@ -21,7 +26,9 @@ import { BreakpointComponent } from './breakpoint/breakpoint.component';
     HttpModule,
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    CompositionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

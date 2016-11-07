@@ -2,39 +2,4 @@
   <span class="navbar-brand" href="#">Typology</span>
 </nav>
 
-<div class="row wrapper">
-
-  <main class="main col-xs-8">
-    <div class="container-fluid">1</div>    
-  </main>
-
-  <aside class="sidebar col-xs-4">
-    <div class="container-fluid">
-
-      <ngb-accordion #acc="ngbAccordion" [closeOthers]="true" activeIds="ngb-panel-0">
-
-        <ngb-panel>
-          <template ngbPanelTitle>
-            <span>Media Queries</span>
-          </template>
-          <template ngbPanelContent>
-           Media
-          </template>
-        </ngb-panel>
-
-        <ngb-panel>
-          <template ngbPanelTitle>
-            <span>Base <i>* html, body</i></span>
-          </template>
-          <template ngbPanelContent>
-           Base
-          </template>
-        </ngb-panel>        
-
-      </ngb-accordion>
-
-
-    </div>
-  </aside>
-
-</div>
+<app-composition class="row wrapper"></app-composition>

@@ -1,8 +1,8 @@
 export class RuleLine {
 
     constructor(
-        key: String,
-        value: String
+        public key: String,
+        public value: String
     ) {}
 
 }

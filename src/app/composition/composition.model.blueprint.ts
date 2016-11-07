@@ -18,7 +18,7 @@ export var COMPOSITION_BLUEPRINT: Composition = {
     rules: [
 
         // 1. Base
-        new Rule(1, 'Base - * <html> <body>', [
+        new Rule(1, 'Base', '<html> <body>', [
 
             // BP 1
             new RuleBreakpoint(1, [
@@ -30,7 +30,7 @@ export var COMPOSITION_BLUEPRINT: Composition = {
         ]),
 
         // 2. Base
-        new Rule(2, 'Header 1 - <h1>', [
+        new Rule(2, 'Header 1', '<h1>', [
 
             // BP 1
             new RuleBreakpoint(1, [
