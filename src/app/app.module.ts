@@ -3,16 +3,23 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { AppComponent } from './app.component';
+import { RuleComponent } from './rule/rule.component';
+import { BreakpointComponent } from './breakpoint/breakpoint.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RuleComponent,
+    BreakpointComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
